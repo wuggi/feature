@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="featureIDE">
-				<feature name="Base"/>
+			<and abstract="true" mandatory="true" name="Handy">
+				<feature name="GPS"/>
+				<feature mandatory="true" name="Anrufe"/>
+				<alt mandatory="true" name="Screen">
+					<feature mandatory="true" name="Basic"/>
+					<feature mandatory="true" name="TouchDisplay"/>
+					<feature mandatory="true" name="HoheAufloesung"/>
+				</alt>
+				<and name="Media">
+					<feature name="Camera"/>
+					<feature name="MP3"/>
+				</and>
 			</and>
 		</struct>
-		<constraints/>
+		<constraints>
+			<rule>
+				<eq>
+					<var>GPS</var>
+					<var>Basic</var>
+				</eq>
+			</rule>
+		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>
