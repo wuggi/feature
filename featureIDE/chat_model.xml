@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="Chat_Program">
+				<and mandatory="true" name="GUI">
+					<feature mandatory="true" name="Themes"/>
+					<feature mandatory="true" name="Language"/>
+				</and>
+				<and name="Chat">
+					<feature name="Emoticons"/>
+					<feature mandatory="true" name="Text"/>
+					<feature name="NewLayer1"/>
+					<feature name="Chat_Tags"/>
+				</and>
+				<and name="Buddy_List">
+					<feature name="NewLayer2"/>
+				</and>
+				<feature mandatory="true" name="Profil"/>
+				<feature name="Ticket_Funktion"/>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

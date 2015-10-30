@@ -1,28 +1,149 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="Handy">
-				<feature name="GPS"/>
-				<feature mandatory="true" name="Anrufe"/>
-				<alt mandatory="true" name="Screen">
-					<feature mandatory="true" name="Basic"/>
-					<feature mandatory="true" name="TouchDisplay"/>
-					<feature mandatory="true" name="HoheAufloesung"/>
-				</alt>
-				<and name="Media">
-					<feature name="Camera"/>
-					<feature name="MP3"/>
+			<and abstract="true" mandatory="true" name="Terminplaner">
+				<description>
+					Terminplaner, mit dem Termine und Notizen verwaltet, erstellt und bearbeitet werden können.
+				</description>
+				<feature mandatory="true" name="GUI">
+					<description>
+						Darstellung des Kalenders und der Notizen
+					</description>
+				</feature>
+				<and mandatory="true" name="Kalender">
+					<description>
+						Der Kalender hat verschiedene Ansichten und es kann durch den Kalender navigiert werden.
+						Es können neue Termine eingerichtet und Reminder eingestellt werden.
+						Außerdem können Kalender importiert werden.
+					</description>
+					<alt abstract="true" mandatory="true" name="Ansicht">
+						<description>
+							verschiedene Kalenderansichten / Zeiträume
+							
+						</description>
+						<feature mandatory="true" name="Tag">
+							<description>
+								Tagesansicht
+							</description>
+						</feature>
+						<feature mandatory="true" name="Woche">
+							<description>
+								Wochenansicht
+							</description>
+						</feature>
+						<feature mandatory="true" name="Monat">
+							<description>
+								Monatsansicht
+							</description>
+						</feature>
+						<feature mandatory="true" name="Jahr">
+							<description>
+								Jahresansicht
+							</description>
+						</feature>
+						<feature mandatory="true" name="Fuenf_Tage">
+							<description>
+								Funef-Tage Ansicht
+							</description>
+						</feature>
+						<feature mandatory="true" name="Terminuebersicht">
+							<description>
+								Übersicht über alle Termine
+							</description>
+						</feature>
+					</alt>
+					<feature mandatory="true" name="Navigation">
+						<description>
+							Durch den Kalender navigieren
+						</description>
+					</feature>
+					<feature name="Feiertage">
+						<description>
+							Feiertage anzeigen
+						</description>
+					</feature>
+					<and name="Termin_Reminder">
+						<description>
+							Erinnerung an Termine
+						</description>
+						<feature name="Popup_Fenster">
+							<description>
+								Erinnerungen per Pop-Up
+							</description>
+						</feature>
+						<feature name="Snooze">
+							<description>
+								Snooze erlauben und Zeitraum festlegen
+								
+							</description>
+						</feature>
+						<feature name="Zeitpunkt">
+							<description>
+								Zeitpunkt der Erinnerung
+							</description>
+						</feature>
+					</and>
+					<feature name="Kalender_Import">
+						<description>
+							Kalender importieren
+						</description>
+					</feature>
+					<and name="Termin_erstellen">
+						<description>
+							Einen Termin erstellen
+						</description>
+						<feature mandatory="true" name="Betreff">
+							<description>
+								Betreff des Termins
+							</description>
+						</feature>
+						<and abstract="true" mandatory="true" name="Zeitraum">
+							<description>
+								In welchem Zeitraum findet der Termin statt
+							</description>
+							<feature mandatory="true" name="Startpunkt">
+								<description>
+									Startzeit des Termins
+								</description>
+							</feature>
+							<feature mandatory="true" name="Endpunkt">
+								<description>
+									Endzeit des Termins
+								</description>
+							</feature>
+						</and>
+						<feature name="Ort">
+							<description>
+								Wo findet der Termin statt
+							</description>
+						</feature>
+					</and>
+				</and>
+				<and mandatory="true" name="Notes">
+					<description>
+						Notizen eintrage, verwalten und markieren
+					</description>
+					<alt abstract="true" name="Bearbeiten">
+						<description>
+							In eine To-Do-List wird fesgehalten, welche Aufgaben anstehen 
+							und welche Aufgabe noch zu erledigen.
+						</description>
+						<feature mandatory="true" name="To_Do">
+							<description>
+								anstehende Aufgabe
+							</description>
+						</feature>
+						<feature mandatory="true" name="Erledigt">
+							<description>
+								erledigenden Aufgaben wird nach und nach durchgestrichen.
+							</description>
+						</feature>
+						<feature mandatory="true" name="Important"/>
+					</alt>
 				</and>
 			</and>
 		</struct>
-		<constraints>
-			<rule>
-				<eq>
-					<var>GPS</var>
-					<var>Basic</var>
-				</eq>
-			</rule>
-		</constraints>
+		<constraints/>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>
