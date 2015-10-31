@@ -1,149 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
-			<and abstract="true" mandatory="true" name="Terminplaner">
+			<and abstract="true" mandatory="true" name="Rechner">
 				<description>
-					Terminplaner, mit dem Termine und Notizen verwaltet, erstellt und bearbeitet werden können.
+					Rechner mit verschiedenen Funktionen
 				</description>
-				<feature mandatory="true" name="GUI">
+				<or mandatory="true" name="Menu">
 					<description>
-						Darstellung des Kalenders und der Notizen
+						Menü um die einzelnen Rechner auswählen zu können.
 					</description>
-				</feature>
-				<and mandatory="true" name="Kalender">
-					<description>
-						Der Kalender hat verschiedene Ansichten und es kann durch den Kalender navigiert werden.
-						Es können neue Termine eingerichtet und Reminder eingestellt werden.
-						Außerdem können Kalender importiert werden.
-					</description>
-					<alt abstract="true" mandatory="true" name="Ansicht">
+					<and mandatory="true" name="Mathe">
 						<description>
-							verschiedene Kalenderansichten / Zeiträume
-							
+							Taschenrechner mit verschiedenen Optionen
 						</description>
-						<feature mandatory="true" name="Tag">
+						<feature mandatory="true" name="Grundrechenarten">
 							<description>
-								Tagesansicht
+								Enthält die Grundrechenarten
 							</description>
 						</feature>
-						<feature mandatory="true" name="Woche">
+						<feature name="Wissenschaftlich">
 							<description>
-								Wochenansicht
+								Erweitert die Grundrechenarten um Potenzen, Wurzeln etc.
 							</description>
 						</feature>
-						<feature mandatory="true" name="Monat">
+						<and name="Kurvendiskussion">
 							<description>
-								Monatsansicht
+								Erweiterung des Taschenrechners um Kurvendiskussion
 							</description>
-						</feature>
-						<feature mandatory="true" name="Jahr">
-							<description>
-								Jahresansicht
-							</description>
-						</feature>
-						<feature mandatory="true" name="Fuenf_Tage">
-							<description>
-								Funef-Tage Ansicht
-							</description>
-						</feature>
-						<feature mandatory="true" name="Terminuebersicht">
-							<description>
-								Übersicht über alle Termine
-							</description>
-						</feature>
-					</alt>
-					<feature mandatory="true" name="Navigation">
-						<description>
-							Durch den Kalender navigieren
-						</description>
-					</feature>
-					<feature name="Feiertage">
-						<description>
-							Feiertage anzeigen
-						</description>
-					</feature>
-					<and name="Termin_Reminder">
-						<description>
-							Erinnerung an Termine
-						</description>
-						<feature name="Popup_Fenster">
-							<description>
-								Erinnerungen per Pop-Up
-							</description>
-						</feature>
-						<feature name="Snooze">
-							<description>
-								Snooze erlauben und Zeitraum festlegen
-								
-							</description>
-						</feature>
-						<feature name="Zeitpunkt">
-							<description>
-								Zeitpunkt der Erinnerung
-							</description>
-						</feature>
-					</and>
-					<feature name="Kalender_Import">
-						<description>
-							Kalender importieren
-						</description>
-					</feature>
-					<and name="Termin_erstellen">
-						<description>
-							Einen Termin erstellen
-						</description>
-						<feature mandatory="true" name="Betreff">
-							<description>
-								Betreff des Termins
-							</description>
-						</feature>
-						<and abstract="true" mandatory="true" name="Zeitraum">
-							<description>
-								In welchem Zeitraum findet der Termin statt
-							</description>
-							<feature mandatory="true" name="Startpunkt">
+							<feature name="Funktionsanzeige">
 								<description>
-									Startzeit des Termins
-								</description>
-							</feature>
-							<feature mandatory="true" name="Endpunkt">
-								<description>
-									Endzeit des Termins
+									Graphische Anzeige der erstellten Funktionen
 								</description>
 							</feature>
 						</and>
-						<feature name="Ort">
-							<description>
-								Wo findet der Termin statt
-							</description>
-						</feature>
 					</and>
-				</and>
-				<and mandatory="true" name="Notes">
-					<description>
-						Notizen eintrage, verwalten und markieren
-					</description>
-					<alt abstract="true" name="Bearbeiten">
+					<or mandatory="true" name="Finanzen">
 						<description>
-							In eine To-Do-List wird fesgehalten, welche Aufgaben anstehen 
-							und welche Aufgabe noch zu erledigen.
+							Zins- und Waehrungumrechner
 						</description>
-						<feature mandatory="true" name="To_Do">
+						<feature mandatory="true" name="Waehrungsumrechner">
 							<description>
-								anstehende Aufgabe
+								Der Währungsumrechner rechnet Währungen ineinander um.
+								Beispielsweise von Euro zu Dollar
 							</description>
 						</feature>
-						<feature mandatory="true" name="Erledigt">
+						<feature mandatory="true" name="Zinsrechner">
 							<description>
-								erledigenden Aufgaben wird nach und nach durchgestrichen.
+								Der Zinsrechner berechnet aus Nutzereingaben beispielsweise das Endkapital nach einer bestimmten Laufzeit o.ä.
 							</description>
 						</feature>
-						<feature mandatory="true" name="Important"/>
+					</or>
+					<or mandatory="true" name="Physik">
+						<description>
+							Abstraktion der Physik Einheit
+							Es beinhaltet Werkzeuge um Probleme der Physik zu berechnen
+						</description>
+						<feature mandatory="true" name="Einheitenrechner">
+							<description>
+								Der Einheitenrechner rechnet verschiedene Einheiten ineinander um
+								zB  PS zu kW
+							</description>
+						</feature>
+						<feature mandatory="true" name="Mechanik">
+							<description>
+								führt durch Nutzereingaben verschiedenste Berechnungen der Mechanik durch
+							</description>
+						</feature>
+						<feature mandatory="true" name="Optik">
+							<description>
+								führt durch Nutzereingaben verschiedenste Berechnungen der Optik durch
+							</description>
+						</feature>
+					</or>
+					<feature mandatory="true" name="Notenrechner"/>
+					<or mandatory="true" name="Zeit">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="Datumsrechner">
+							<description>
+								Gibt den Wochentag für ein angegebenes Datum aus
+							</description>
+						</feature>
+						<feature mandatory="true" name="Stoppuhr">
+							<description>
+								Stoppuhr mit Start- und Stopfunktion
+							</description>
+						</feature>
+						<feature mandatory="true" name="Weltzeituhr">
+							<description>
+								Zeigt die aktuelle Zeit für jede Zeitzone der Welt an
+							</description>
+						</feature>
+					</or>
+					<or mandatory="true" name="Auto">
+						<description>
+						Beinhaltet relevante Rechenoperationen für Autofahrer
+						</description>
+						<feature mandatory="true" name="Spritrechner">
+							<description>
+							Rechnet mit durschnittl. Spritverbrauch und zu fahrenden Kilometern den Spritverbrauch und die Kosten aus.	
+							</description>
+						</feature>
+						<feature mandatory="true" name="Bussgeldrechner">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Fahrtenbuch">
+							<description>
+								
+							</description>
+						</feature>
+					</or>
+				</or>
+				<alt abstract="true" mandatory="true" name="GUI">
+					<description>
+						Abstraktion des User Interfaces 
+						Entweder es gibt eine grafische Oberfläche oder jedes Werkzeug
+						wird textuell über die Konsole gesteuert
+					</description>
+					<feature mandatory="true" name="Mobile"/>
+					<alt mandatory="true" name="PC">
+						<feature mandatory="true" name="Textuell">
+							<description>
+								Konsolensteuerung
+							</description>
+						</feature>
+						<feature mandatory="true" name="Graphisch">
+							<description>
+								Graphische Oberfläche für das Menü und möglichst jedes Werkzeug
+							</description>
+						</feature>
 					</alt>
-				</and>
+					<feature mandatory="true" name="Web"/>
+				</alt>
 			</and>
 		</struct>
-		<constraints/>
+		<constraints>
+			<rule>
+				<imp>
+					<var>Funktionsanzeige</var>
+					<var>Graphisch</var>
+				</imp>
+			</rule>
+		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>
 		<featureOrder userDefined="false"/>

@@ -1,0 +1,31 @@
+# Lists all features from the model with manual (first digit) and automatic (second digit) selection
+# 0 = deselected, 1 = selected, 2 = undefined
+21Rechner
+21Menu
+12Mathe
+21Grundrechenarten
+22Wissenschaftlich
+22Kurvendiskussion
+22Funktionsanzeige
+22Finanzen
+22Waehrungsumrechner
+22Zinsrechner
+22Physik
+22Einheitenrechner
+22Mechanik
+22Optik
+22Notenrechner
+22Zeit
+22Datumsrechner
+22Stoppuhr
+22Weltzeituhr
+22Auto
+22Spritrechner
+22Bussgeldrechner
+22Fahrtenbuch
+21GUI
+20Mobile
+11PC
+20Textuell
+12Graphisch
+20Web
