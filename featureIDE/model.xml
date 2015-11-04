@@ -40,8 +40,8 @@
 						</description>
 						<feature mandatory="true" name="Waehrungsumrechner">
 							<description>
-								Der Währungsumrechner rechnet Währungen ineinander um.
-								Beispielsweise von Euro zu Dollar
+								Der Währungsumrechner rechnet eine Währungen in eine andere um.
+								Beispielsweise von Euro in Dollar
 							</description>
 						</feature>
 						<feature mandatory="true" name="Zinsrechner">
@@ -52,8 +52,7 @@
 					</or>
 					<or mandatory="true" name="Physik">
 						<description>
-							Abstraktion der Physik Einheit
-							Es beinhaltet Werkzeuge um Probleme der Physik zu berechnen
+							Physik Rechner
 						</description>
 						<feature mandatory="true" name="Einheitenrechner">
 							<description>
@@ -63,19 +62,23 @@
 						</feature>
 						<feature mandatory="true" name="Mechanik">
 							<description>
-								führt durch Nutzereingaben verschiedenste Berechnungen der Mechanik durch
+								Berechnungen von Mechanikformeln z.B freier Fall etc.
 							</description>
 						</feature>
 						<feature mandatory="true" name="Optik">
 							<description>
-								führt durch Nutzereingaben verschiedenste Berechnungen der Optik durch
+								Berechnung von Formeln aus der Optik z.B. Brechzahlen
 							</description>
 						</feature>
 					</or>
-					<feature mandatory="true" name="Notenrechner"/>
+					<feature mandatory="true" name="Notenrechner">
+						<description>
+							Berechnet die Durhscnittsnote anhand von Noten und CPs
+						</description>
+					</feature>
 					<or mandatory="true" name="Zeit">
 						<description>
-							
+							Rechnen mit Zeiteinheiten
 						</description>
 						<feature mandatory="true" name="Datumsrechner">
 							<description>
@@ -95,24 +98,29 @@
 					</or>
 					<or mandatory="true" name="Auto">
 						<description>
-						Beinhaltet relevante Rechenoperationen für Autofahrer
+							Beinhaltet relevante Rechenoperationen für Autofahrer
 						</description>
 						<feature mandatory="true" name="Spritrechner">
 							<description>
-							Rechnet mit durschnittl. Spritverbrauch und zu fahrenden Kilometern den Spritverbrauch und die Kosten aus.	
+								Rechnet mit durschnittl. Spritverbrauch, zu fahrenden Kilometern und aktuellen Bebzinpreisen den Spritverbrauch und die Kosten aus.
 							</description>
 						</feature>
 						<feature mandatory="true" name="Bussgeldrechner">
 							<description>
-								
+								Berechnet anhand vom Vergehen und weiterer Angaben das Bußgeld und die Punkte in Flensburg
 							</description>
 						</feature>
 						<feature mandatory="true" name="Fahrtenbuch">
 							<description>
-								
+								Eingabe von gefahrenen Kilometern und Zweck der Fahrt. Berechnung von gefahrenen Kilometern im Monat, durschnitl gefahren im Monat etc.
 							</description>
 						</feature>
 					</or>
+					<feature mandatory="true" name="Formelsammlung">
+						<description>
+							Beeinhaltet alle/viele Formeln der Mathematik
+						</description>
+					</feature>
 				</or>
 				<alt abstract="true" mandatory="true" name="GUI">
 					<description>
